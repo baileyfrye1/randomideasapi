@@ -26,6 +26,11 @@ class IdeaList {
         }
     }
 
+    addIdeaToList(idea) {
+        this._ideas.push(idea);
+        this.render();
+    }
+
     getTagClass(tag) {
         tag = tag.toLowerCase();
         let tagClass = '';
@@ -38,7 +43,6 @@ class IdeaList {
     }
 
     render() {
-
         this._ideaListEl.innerHTML = this._ideas.map((idea) => {
             const tagClass = this.getTagClass(idea.tag);
             return `
