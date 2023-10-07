@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Body parser middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended: false }));
 
 // cors middleware
 app.use(cors({
